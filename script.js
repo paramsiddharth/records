@@ -87,7 +87,7 @@ const songs = [
   'Gatifull',
   'Pak_Raza',
   'Pyar_Zehreela',
-  'Naainsaafi',
+  'Naainsaaf',
 ];
 
 window.addEventListener('load', () => {
