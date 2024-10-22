@@ -43,3 +43,23 @@ h1 {
 .copyright {
 	color: var(--purple);
 }
+
+div.tooltip {	
+	position: absolute;
+	text-align: center;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px;
+	pointer-events: none;
+	color: var(--green);
+}
+
+#ext {
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+a, a:active, a:hover, a:visited {
+	opacity: 0.5;
+	color: inherit;
+}
