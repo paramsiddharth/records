@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Montserrat;
-	src: url(node_modules/@fontsource/montserrat/files/montserrat-latin-500-normal.woff2) format('woff2');
+	src: url(modules/@fontsource/montserrat/files/montserrat-latin-500-normal.woff2) format('woff2');
 }
 
 :root, body {
