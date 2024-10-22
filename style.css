@@ -1,0 +1,45 @@
+@font-face {
+	font-family: Montserrat;
+	src: url(node_modules/@fontsource/montserrat/files/montserrat-latin-500-normal.woff2) format('woff2');
+}
+
+:root, body {
+	--dark: #000F08;
+	--green: #136F63;
+	--yellow: #E0CA3C;
+	--red: #F34213;
+	--purple: #3E2F5B;
+	background-color: var(--dark);
+	color: var(--red);
+}
+
+.container {
+	background-color: var(--dark);
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+	
+}
+
+.logo {
+	border-radius: 50%;
+	animation: rotate 10s linear infinite;
+}
+
+h1 {
+	font-family: Montserrat;
+}
+
+.title {
+	color: var(--yellow);
+}
+
+.copyright {
+	color: var(--purple);
+}
