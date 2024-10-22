@@ -12,4 +12,4 @@ mkdir dist/
 	cp *.css dist/
 	cp -r node_modules/ dist/modules/
 ) 2>/dev/null
-gh-pages -d dist
+gh-pages -d dist --cname records.paramsid.com
