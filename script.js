@@ -62,12 +62,61 @@ const data = {
 
 // Specify the dimensions of the chart.
 const width = 928;
-const height = 600;
+const height = 200;
 
 const mousePosition = {
 	x: 0,
 	y: 0,
 };
+
+/**
+ * @type {HTMLAudioElement}
+ */
+const musicTag = document.querySelector('#music');
+const maxVol = 0.5;
+const songs = [
+  'Never_Going_To',
+  'Mashooqa',
+  'Dil_Tut_Gaya_Na',
+  'Neutrino',
+  'Something_I_Do',
+  'Na_Kono_Sikayat',
+  'Delhi_Se',
+  'Early_Morning_Confusion',
+  'Good_Friend_Bad_Friend',
+  'Gatifull',
+  'Pak_Raza',
+  'Pyar_Zehreela',
+  'Naainsaafi',
+];
+
+window.addEventListener('load', () => {
+  // Select random song
+  const song = songs[Math.floor(Math.random() * songs.length)]
+  
+  musicTag.src = `https://www.paramsid.com/files/${song}.mp3`;
+  const e = () => {
+    musicTag.play().then(() => {
+      let currentTime = 0;
+      try {
+        currentTime = Math.random() * (musicTag.duration * 3 / 4);
+        if (isNaN(currentTime)) {
+          currentTime = 0;
+        }
+      } catch {}
+      musicTag.currentTime = currentTime;
+      musicTag.volume = 0;
+      const fade = setInterval(() => {
+        musicTag.volume = Math.min(maxVol, musicTag.volume + 0.01);
+        if (musicTag.volume === maxVol) {
+          clearInterval(fade);
+        }
+      }, 150);
+      document.removeEventListener('mousemove', e);
+    }).catch(() => {});
+  };
+  document.addEventListener('mousemove', e);
+});
 
 document.addEventListener('mousemove', (event) => {
 	mousePosition.x = event.pageX;
