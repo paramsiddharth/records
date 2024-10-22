@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Previous
+*.log
+*.exe
+*.out
+.vscode/
+.DS_Store
+Thumbs.db
