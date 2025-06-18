@@ -26,5 +26,8 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
+    - name: Set remote repository
+      run: git remote set-url origin git@github.com:$GITHUB_REPOSITORY.git
+
     - name: Deploy
       run: ./deploy.sh
