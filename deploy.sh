@@ -11,6 +11,7 @@ mkdir dist/
 	cp *.js dist/
 	cp *.css dist/
 	cp *.txt dist/
+	cp -r data/ dist/
 	cp -r node_modules/ dist/modules/
 ) 2>/dev/null
 npx gh-pages -u 'GitHub Actions <action@github.com>' -d dist --cname records.paramsid.com
