@@ -13,4 +13,4 @@ mkdir dist/
 	cp *.txt dist/
 	cp -r node_modules/ dist/modules/
 ) 2>/dev/null
-gh-pages -d dist --cname records.paramsid.com
+npx gh-pages -d dist --cname records.paramsid.com
